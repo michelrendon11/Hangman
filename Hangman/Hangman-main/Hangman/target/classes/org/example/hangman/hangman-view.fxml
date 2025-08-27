@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.hangman.HangmanController">
+    <HBox alignment="CENTER" fillHeight="false" maxHeight="400.0" maxWidth="600.0" minHeight="400.0" minWidth="600.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <Pane prefHeight="400.0" prefWidth="250.0">
+            <HBox.margin>
+                <Insets right="20.0" />
+            </HBox.margin>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#a9a9a9" height="40.0" layoutY="360.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="250.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#a17a51" height="16.0" layoutX="31.0" layoutY="47.0" stroke="BLACK" strokeType="INSIDE" width="214.0" />
+            <Circle fx:id="head" fill="#1fff5f" layoutX="125.0" layoutY="135.0" radius="24.0" stroke="BLACK" strokeType="INSIDE" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#9c7752" height="299.0" layoutX="223.0" layoutY="62.0" stroke="BLACK" strokeType="INSIDE" width="22.0" />
+            <Line endX="-2.288818359375E-5" endY="-9.000015258789062" fill="#d70d0d" layoutX="125.0" layoutY="119.0" startX="-2.288818359375E-5" startY="-55.0000114440918" stroke="#d70606" strokeWidth="3.0" />
+            <Rectangle fx:id="body" arcHeight="5.0" arcWidth="5.0" fill="#1fff3d" height="82.0" layoutX="118.0" layoutY="171.0" stroke="BLACK" strokeType="INSIDE" width="16.0" />
+            <Rectangle fx:id="leftArm" arcHeight="5.0" arcWidth="5.0" fill="#1fff3d" height="60.0" layoutX="89.0" layoutY="170.0" rotate="30.0" stroke="BLACK" strokeType="INSIDE" width="9.0" />
+            <Rectangle fx:id="leftLeg" arcHeight="5.0" arcWidth="5.0" fill="#1fff3d" height="60.0" layoutX="97.0" layoutY="251.0" rotate="390.0" stroke="BLACK" strokeType="INSIDE" width="9.0" />
+            <Rectangle fx:id="rightLeg" arcHeight="5.0" arcWidth="5.0" fill="#1fff3d" height="60.0" layoutX="145.0" layoutY="251.0" rotate="-30.0" stroke="BLACK" strokeType="INSIDE" width="9.0" />
+            <Rectangle fx:id="rightArm" arcHeight="5.0" arcWidth="5.0" fill="#1fff3d" height="60.0" layoutX="152.0" layoutY="170.0" rotate="-30.0" stroke="BLACK" strokeType="INSIDE" width="9.0" />
+        </Pane>
+        <VBox alignment="CENTER" spacing="20.0">
+            <TextField fx:id="letter" alignment="CENTER" maxHeight="20.0" maxWidth="80.0" prefHeight="20.0" prefWidth="80.0">
+                <font>
+                    <Font name="System Bold" size="20.0" />
+                </font>
+            </TextField>
+         <Text fx:id="allLetters" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER">
+            <font>
+               <Font size="15.0" />
+            </font>
+         </Text>
+         <Text fx:id="guess" fill="#e40202" strokeType="OUTSIDE" strokeWidth="0.0" text="Good Guest" textAlignment="CENTER">
+            <font>
+               <Font name="System Bold" size="15.0" />
+            </font>
+         </Text>
+            <Button fx:id="test" mnemonicParsing="false" onMouseClicked="#test" style="-fx-background-radius: 10;" text="Test" textAlignment="CENTER">
+                <font>
+                    <Font name="System Bold" size="20.0" />
+                </font>
+            </Button>
+             <TextField fx:id="hideText" alignment="CENTER" editable="false">
+                 <font>
+                     <Font name="System Bold" size="20.0" />
+                 </font>
+             </TextField>
+            <Button fx:id="reset" mnemonicParsing="false" onMouseClicked="#reset" style="-fx-background-radius: 10;" text="Reset" textAlignment="CENTER">
+                <font>
+                    <Font name="System Bold" size="20.0" />
+                </font>
+            </Button>
+            <Button fx:id="set" mnemonicParsing="false" onMouseClicked="#set" prefHeight="34.0" prefWidth="294.0" text="Set">
+                <graphic>
+                    <TextField fx:id="secret" prefHeight="25.0" prefWidth="231.0" promptText="PHRASE">
+                        <font>
+                            <Font name="System Bold" size="12.0" />
+                        </font>
+                    </TextField>
+                </graphic>
+                <font>
+                    <Font name="System Bold" size="20.0" />
+                </font>
+            </Button>
+        </VBox>
+    </HBox>
+   <Text fx:id="game" fill="#0d2ad9" stroke="#1b1b1b" strokeType="OUTSIDE" strokeWidth="5.0" text="GAME OVER !!" textAlignment="CENTER" x="80.0" y="83.0">
+      <font>
+         <Font name="System Bold" size="70.0" />
+      </font>
+   </Text>
+</AnchorPane>
