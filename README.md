@@ -1,4 +1,4 @@
-#3 Hangman
+### Hangman
 A simple hangman game, built just for fun.
 To run the game:
  - Download Zip file
