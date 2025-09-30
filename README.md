@@ -1,5 +1,5 @@
 ### Hangman
-A simple hangman game, built just for fun.
+A simple Hangman game for Windows, built just for fun.
 To run the game:
  - Download Zip file
  - Extract project
